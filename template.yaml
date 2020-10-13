@@ -35,7 +35,7 @@ Resources:
   SubmitFormFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src-functions/
+      CodeUri: src/
       Handler: app.handler
       Runtime: nodejs12.x
       MemorySize: 128
@@ -61,8 +61,8 @@ Resources:
       Description: !Sub
         - Stack ${StackTagName} Environment ${EnvironmentTagName} Function ${ResourceName}
         - ResourceName: GetFormData
-      CodeUri: src-functions/
-      Handler: app.handler
+      CodeUri: src/
+      Handler: app.get
       Runtime: nodejs12.x
       MemorySize: 128
       Timeout: 30
